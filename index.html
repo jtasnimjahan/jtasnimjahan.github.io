@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jabin Tasnim Jahan, MBBS, MPH: physician-epidemiologist and PhD student in Epidemiology at the University at Albany.">
+<title>Jabin Tasnim Jahan Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single reading column with a life-course strip as the signature element; projects as typed study records */
+:root{
+  --bg:#f6f7f5; --surface:#ffffff; --fg:#1c1f26; --muted:#5b6170; --line:#d9dde3;
+  --accent:#4f3a86; --accent-soft:#ece7f6; --green:#2b7a69; --green-soft:#e2f1ec; --amber:#8a5a12; --amber-soft:#f6ecd9;
+  --display:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14151a; --surface:#1c1e25; --fg:#e7e8ee; --muted:#a2a7b5; --line:#2e313b;
+  --accent:#b8a4ec; --accent-soft:#2a2440; --green:#72c6af; --green-soft:#16302a; --amber:#e3b46a; --amber-soft:#33281a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14151a; --surface:#1c1e25; --fg:#e7e8ee; --muted:#a2a7b5; --line:#2e313b;
+  --accent:#b8a4ec; --accent-soft:#2a2440; --green:#72c6af; --green-soft:#16302a; --amber:#e3b46a; --amber-soft:#33281a; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:880px;margin:0 auto}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+.label{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+/* nav */
+nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-block:22px;border-bottom:1px solid var(--line)}
+nav .mark{font-family:var(--display);font-weight:700;font-size:15px;color:var(--fg);text-decoration:none}
+nav ul{display:flex;flex-wrap:wrap;gap:18px;list-style:none;margin:0;padding:0}
+nav ul a{font-family:var(--display);font-size:14px;font-weight:500;color:var(--muted);text-decoration:none}
+nav ul a:hover{color:var(--accent)}
+
+/* hero */
+header.hero{padding-block:56px 36px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
+.hero-text{display:grid;gap:18px;min-width:0}
+.headshot{width:190px;height:190px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+@media (max-width:640px){header.hero{grid-template-columns:1fr}.headshot{width:140px;height:140px;order:-1}}
+.hero h1{font-size:clamp(34px,6vw,54px);font-weight:700;letter-spacing:-.02em}
+.hero h1 small{display:block;font-size:.38em;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:10px}
+.hero .lede{font-size:clamp(19px,2.4vw,22px);max-width:40ch;margin:0}
+.hero .lede em{color:var(--accent);font-style:italic}
+
+/* life course */
+.course{margin-block:8px 8px;padding:24px 0 8px}
+.course .label{margin-bottom:18px}
+.stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative}
+.stages::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--accent),var(--green))}
+.stage{position:relative;padding:28px 14px 0 0;min-width:0}
+.stage::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.stage:nth-child(3)::before,.stage:nth-child(4)::before{border-color:var(--green)}
+.stage h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.stage ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.stage li a{font-family:var(--display);font-size:13.5px;line-height:1.35;text-decoration:none;color:var(--fg);display:block;padding:6px 8px;border-radius:6px;background:var(--surface);border:1px solid var(--line)}
+.stage li a:hover{border-color:var(--accent);color:var(--accent)}
+@media (max-width:640px){
+  .stages{grid-template-columns:1fr;gap:18px}
+  .stages::before{top:0;bottom:0;left:7px;right:auto;width:2px;height:auto;background:linear-gradient(180deg,var(--accent),var(--green))}
+  .stage{padding:0 0 0 30px}
+}
+
+section{padding-block:48px;border-top:1px solid var(--line)}
+section > .label{display:block;margin-bottom:10px}
+section > h2{font-size:clamp(24px,3.4vw,30px);font-weight:700;margin-bottom:22px}
+.prose p{max-width:66ch;margin:0 0 14px}
+
+/* projects */
+.projects{display:grid;gap:22px}
+article.study{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:14px;min-width:0;scroll-margin-top:20px}
+.study-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start}
+.study h3{font-size:20px;font-weight:700;flex:1 1 360px;min-width:0}
+.pill{font-family:var(--display);font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.pill.review{background:var(--accent-soft);color:var(--accent)}
+.pill.prep{background:var(--amber-soft);color:var(--amber)}
+.pill.ongoing{background:var(--green-soft);color:var(--green)}
+.study p{margin:0;max-width:68ch}
+dl.meta{display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;margin:0;font-size:15px}
+dl.meta dt{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+dl.meta dd{margin:0;min-width:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:12.5px;padding:2px 8px;border:1px solid var(--line);border-radius:4px;color:var(--fg)}
+@media (max-width:520px){dl.meta{grid-template-columns:1fr;gap:2px}dl.meta dd{margin-bottom:8px}}
+
+/* practice + presentations */
+.rows{display:grid;gap:0}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding-block:16px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
+.row h3{font-size:17px;font-weight:600;margin-bottom:4px}
+.row p{margin:0;color:var(--muted);font-size:15.5px;max-width:64ch}
+@media (max-width:560px){.row{grid-template-columns:1fr;gap:4px}}
+
+.poster{background:var(--accent-soft);border-radius:10px;padding:22px 24px;display:grid;gap:6px}
+.poster h3{font-size:19px}
+.poster .when{font-family:var(--mono);font-size:13px;color:var(--accent)}
+
+.toolkit{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.toolkit h3{font-size:14px;font-weight:700;margin-bottom:10px}
+
+.sub{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:26px}
+.theme{border-top:3px solid var(--accent);padding-top:14px;min-width:0}
+.theme:nth-child(2){border-color:var(--green)}
+.theme:nth-child(3){border-color:var(--amber)}
+.theme h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.theme p{margin:0 0 10px;font-size:15.5px}
+.theme .rel{font-family:var(--display);font-size:13px;color:var(--muted);margin:0}
+.cite{margin:0;max-width:70ch}
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.email{font-family:var(--mono);font-size:15px;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);user-select:all}
+button.copy{font-family:var(--display);font-size:14px;font-weight:600;padding:8px 14px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);cursor:pointer}
+button.copy:hover{opacity:.9}
+.links{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px;font-family:var(--display);font-size:15px}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);font-family:var(--display);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body style="margin:0">
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="mark" href="#top">Jabin Tasnim Jahan</a>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#presentations">Publications</a></li>
+      <li><a href="#practice">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-text">
+    <span class="label">Physician-Epidemiologist · PhD Student, University at Albany</span>
+    <h1>Jabin Tasnim Jahan<small>MBBS, MPH</small></h1>
+    <p class="lede">I study how health is shaped <em>before birth and across the life course</em>, and who gets missed when we measure it.</p>
+    </div>
+    <img class="headshot" src="headshot.jpg" alt="Jabin Tasnim Jahan" width="190" height="190">
+  </header>
+
+  <div class="course" aria-label="Projects across the life course">
+    <div class="label">My work across the life course</div>
+    <div class="stages">
+      <div class="stage">
+        <h3>Before pregnancy</h3>
+        <ul><li><a href="#bmi">Hidden overweight among Asian American mothers</a></li></ul>
+      </div>
+      <div class="stage">
+        <h3>Pregnancy and birth</h3>
+        <ul>
+          <li><a href="#bmi">Adverse birth outcomes, 2016–2023</a></li>
+        </ul>
+      </div>
+      <div class="stage">
+        <h3>Childhood</h3>
+        <ul><li><a href="#cyshcn">Systems of care for children with special health care needs</a></li></ul>
+      </div>
+      <div class="stage">
+        <h3>Adulthood</h3>
+        <ul>
+          <li><a href="#ckm">Alcohol and cardiovascular-kidney-metabolic health</a></li>
+          <li><a href="#mwccs">Obesity and cardiovascular risk in adults with and without HIV</a></li>
+          <li><a href="#ipv">Intimate partner violence and comorbidities</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="research" class="prose">
+    <span class="label">About my research</span>
+    <h2>Maternal health, chronic disease, and how we measure risk</h2>
+    <p>I am a PhD student in Epidemiology in the Department of Epidemiology and Biostatistics at the University at Albany, State University of New York. My research sits at the intersection of maternal and perinatal epidemiology, chronic disease epidemiology, and population health measurement.</p>
+    <p>I trained in clinical medicine in Bangladesh, where my internship in obstetrics and gynecology put me in the room for antenatal visits, deliveries, and postpartum care. I now bring that clinical perspective to population-based research on birth outcomes, obesity, and cardiometabolic health, with a particular interest in how exposure definitions and risk classifications shape what we learn about health disparities.</p>
+    <div class="themes">
+      <div class="theme"><h3>Maternal and perinatal epidemiology</h3><p>Prepregnancy risk factors, maternal health, and adverse birth outcomes.</p><p class="rel">Hidden overweight among Asian mothers</p></div>
+      <div class="theme"><h3>Chronic disease and cardiometabolic epidemiology</h3><p>Obesity, metabolic health, and cardiovascular risk across populations.</p><p class="rel">Alcohol and CKM health; obesity and CVD risk in MWCCS</p></div>
+      <div class="theme"><h3>Measurement and health equity</h3><p>How exposure definitions, reference groups, and surveillance indicators affect who is identified as at risk.</p><p class="rel">BMI reclassification; reference groups; CYSHCN systems of care</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <span class="label">Current projects</span>
+    <h2>Studies in progress</h2>
+    <div class="projects">
+
+      <article class="study" id="bmi">
+        <div class="study-head">
+          <h3>Hidden overweight and adverse birth outcomes among Asian mothers in the United States, 2016–2023</h3>
+          <span class="pill review">Under review</span>
+        </div>
+        <p>Standard BMI cutoffs were developed largely in non-Asian populations. This population-based reclassification study asks whether applying Asian-specific cutoffs identifies mothers whose overweight is missed by the standard definition, and whether that hidden group faces higher risk of adverse birth outcomes.</p>
+        <dl class="meta">
+          <dt>Data</dt><dd>U.S. natality records (NVSS), 2016–2023</dd>
+          <dt>Methods</dt><dd><div class="tags"><span class="tag">Modified Poisson</span><span class="tag">Effect modification</span><span class="tag">Multiple imputation</span><span class="tag">E-values</span><span class="tag">DAG</span></div></dd>
+          <dt>My role</dt><dd>First author; study design, analysis, and writing</dd>
+          <dt>Venue</dt><dd><i>Paediatric and Perinatal Epidemiology</i> (submitted)</dd>
+        </dl>
+      </article>
+
+      <article class="study" id="cyshcn">
+        <div class="study-head">
+          <h3>Systems of care for children and youth with special health care needs in New York State, 2016–2024</h3>
+          <span class="pill prep">In preparation</span>
+        </div>
+        <p>A repeated cross-sectional analysis of how many New York children with special health care needs receive care within a well-functioning system, how that compares with national estimates, and which subgroups are furthest behind. The work is designed to inform Title V planning for 2025–2030.</p>
+        <dl class="meta">
+          <dt>Data</dt><dd>National Survey of Children's Health; HRSA Title V Information System</dd>
+          <dt>Methods</dt><dd><div class="tags"><span class="tag">Trend analysis</span><span class="tag">State vs. national benchmarking</span><span class="tag">Subgroup disparities</span></div></dd>
+          <dt>My role</dt><dd>Sole author</dd>
+        </dl>
+      </article>
+
+      <article class="study" id="ckm">
+        <div class="study-head">
+          <h3>Who counts as a non-drinker? Reference groups and the alcohol and cardiovascular-kidney-metabolic gradient</h3>
+          <span class="pill prep">In preparation</span>
+        </div>
+        <p>Studies of alcohol and health often compare drinkers with a "non-drinker" group that mixes lifelong abstainers and former drinkers. This collaborative study examines how the choice of reference group changes estimated associations with cardiovascular, kidney, and metabolic health.</p>
+        <dl class="meta">
+          <dt>Data</dt><dd>NHANES, 2011–March 2020</dd>
+          <dt>Methods</dt><dd><div class="tags"><span class="tag">Multi-category exposure</span><span class="tag">Reproducibility checks</span></div></dd>
+          <dt>My role</dt><dd>Co-author; sole analyst for the former-drinker arm (Arm 3)</dd>
+        </dl>
+      </article>
+
+      <article class="study" id="mwccs">
+        <div class="study-head">
+          <h3>Obesity and cardiovascular disease risk in adults living with and without HIV</h3>
+          <span class="pill ongoing">In progress</span>
+        </div>
+        <p>An analysis within the MACS/WIHS Combined Cohort Study (MWCCS), a multisite NIH-funded cohort of adults living with and without HIV, examining how obesity relates to cardiovascular disease risk.</p>
+        <dl class="meta">
+          <dt>Data</dt><dd>MACS/WIHS Combined Cohort Study (MWCCS)</dd>
+          <dt>Methods</dt><dd><div class="tags"><span class="tag">Cohort data analysis</span><span class="tag">CVD risk estimation</span></div></dd>
+          <dt>My role</dt><dd>Data analysis and manuscript writing, with Mark H. Kuniholm, PhD</dd>
+        </dl>
+      </article>
+
+      <article class="study" id="ipv">
+        <div class="study-head">
+          <h3>Comorbidities diagnosed with intimate partner violence in healthcare settings</h3>
+          <span class="pill ongoing">In progress</span>
+        </div>
+        <p>A systematic review of conditions diagnosed alongside intimate partner violence, drawing only on medical record and claims data from clinical settings.</p>
+        <dl class="meta">
+          <dt>My role</dt><dd>Research assistant; screening and data extraction (paid appointment with the Research Foundation for SUNY in August 2026, continuing as a volunteer)</dd>
+        </dl>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="practice">
+    <span class="label">Experience</span>
+    <h2>Research, practice, and teaching</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="when">2026–present</div>
+        <div><h3>Teaching Assistant, EPI 514</h3><p>Introduction to Health Data Security, Management and Statistical Computing using SAS, an advanced graduate-level course, University at Albany.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Aug 2026–present</div>
+        <div><h3>Research Assistant, Intimate Partner Violence Research</h3><p>Research Project Assistant with The Research Foundation for SUNY in August 2026; continuing on the project as a volunteer. Screening and data extraction for a systematic review of comorbidities diagnosed with intimate partner violence.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Mar–Aug 2026</div>
+        <div><h3>Graduate Research Assistant, UAlbany Maternal and Child Health Program</h3><p>Drafted the findings for the 2026 New York State Title V MCH Services Block Grant Application, submitted by NYSDOH to the federal government. Designed an evaluation plan for MCH Navigator competency self-assessments, built outreach for an environmental scan of HRSA MCHB Centers of Excellence and Catalyst Programs, and developed a logic model for the NYS Title V CYSHCN program.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Fall 2025</div>
+        <div><h3>NYSDOH, Bureau of Perinatal, Reproductive and Sexual Health</h3><p>Compared maternal health surveillance across four states and recommended ways to improve public access to reproductive health data.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Summer 2025</div>
+        <div><h3>NYSDOH, AIDS Institute</h3><p>Analyzed statewide survey data on HIV testing, PrEP uptake, and care engagement among sex workers to inform New York's Ending the Epidemic strategy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="presentations">
+    <span class="label">Research outputs</span>
+    <h2>Publications and presentations</h2>
+    <p class="sub">Manuscripts under review</p>
+    <div class="rows" style="margin-bottom:28px">
+      <div class="row">
+        <div class="when">2026</div>
+        <div><p class="cite" style="color:var(--fg)"><b>Jahan JT</b>, Afrose S. Hidden overweight and adverse birth outcomes among Asian mothers in the United States, 2016–2023: a population-based reclassification study. <i>Paediatric and Perinatal Epidemiology</i>. Submitted.</p></div>
+      </div>
+    </div>
+    <p class="sub">Manuscripts in preparation</p>
+    <div class="rows" style="margin-bottom:28px">
+      <div class="row">
+        <div class="when">Sole author</div>
+        <div><p class="cite" style="color:var(--fg)">Rising prevalence and persistently low systems-of-care attainment among children and youth with special health care needs in New York State, 2016–2024.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Co-author</div>
+        <div><p class="cite" style="color:var(--fg)">Who counts as a non-drinker? Reference-group construction and the alcohol and cardiovascular-kidney-metabolic gradient. Target journal: <i>Addiction</i>.</p></div>
+      </div>
+    </div>
+    <p class="sub">Conference presentations, accepted</p>
+    <div class="poster">
+      <span class="when">Thu, Nov 5, 2026 · 11:30 AM–12:00 PM</span>
+      <h3>Hidden overweight and adverse birth outcomes among Asian mothers, United States, 2016–2023</h3>
+      <p style="margin:0">Poster, Northeast Epidemiology Conference, Albany Capital Center, Albany, NY</p>
+    </div>
+    <p class="sub" style="margin-top:28px">Submitted for consideration</p>
+    <div class="rows">
+      <div class="row">
+        <div class="when">2027</div>
+        <div><h3>Hidden overweight and adverse birth outcomes among Asian mothers, United States, 2016–2023</h3><p>Population Association of America Annual Meeting, 2027 (abstract submitted)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="methods">
+    <span class="label">Toolkit</span>
+    <h2>Methods and data</h2>
+    <div class="toolkit">
+      <div><h3>Statistical software</h3><div class="tags"><span class="tag">SAS 9.4</span><span class="tag">R</span><span class="tag">ggplot2</span><span class="tag">ggdag</span></div></div>
+      <div><h3>Epidemiologic methods</h3><div class="tags"><span class="tag">Modified Poisson</span><span class="tag">Interaction testing</span><span class="tag">Multiple imputation</span><span class="tag">E-values</span><span class="tag">Meta-analysis</span></div></div>
+      <div><h3>Data sources</h3><div class="tags"><span class="tag">NVSS Natality</span><span class="tag">NHANES</span><span class="tag">NSCH</span><span class="tag">MWCCS</span><span class="tag">YRBS</span><span class="tag">Title V TVIS</span></div></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <span class="label">Education</span>
+    <h2>Degrees</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="when">Expected 2030</div>
+        <div><h3>PhD, Epidemiology</h3><p>University at Albany, State University of New York</p></div>
+      </div>
+      <div class="row">
+        <div class="when">May 2026</div>
+        <div><h3>MPH, Epidemiology · GPA 3.83</h3><p>University at Albany, State University of New York. Graduate Certificate in Maternal and Child Health.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Oct 2023</div>
+        <div><h3>MBBS (Bachelor of Medicine, Bachelor of Surgery)</h3><p>Holy Family Red Crescent Medical College, University of Dhaka, Bangladesh. Evaluated by WES as equivalent to a U.S. Doctor of Medicine degree.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <span class="label">Credentials</span>
+    <h2>Registration and memberships</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="when">Registration</div>
+        <div><h3>Registered physician, Bangladesh Medical and Dental Council (BMDC), Bangladesh</h3></div>
+      </div>
+      <div class="row">
+        <div class="when">Membership</div>
+        <div><h3>Member, American Public Health Association (APHA)</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="honors">
+    <span class="label">Honors</span>
+    <h2>Awards and recognition</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="when">2026</div>
+        <div><h3>Funded PhD Teaching Assistantship</h3><p>Department of Epidemiology and Biostatistics, University at Albany</p></div>
+      </div>
+      <div class="row">
+        <div class="when">2025</div>
+        <div><h3>PHLOT Fellowship</h3><p>University at Albany and New York State Department of Health</p></div>
+      </div>
+      <div class="row">
+        <div class="when">2025</div>
+        <div><h3>Dean's Merit Scholarship</h3><p>University at Albany</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <span class="label">Contact</span>
+    <h2>Get in touch</h2>
+    <p style="margin:0 0 16px;max-width:60ch">I welcome conversations about perinatal and chronic disease epidemiology, collaborations, and data questions.</p>
+    <address style="font-style:normal;margin:0 0 18px;line-height:1.55">Department of Epidemiology and Biostatistics<br>College of Integrated Health Sciences, University at Albany<br>240 E Pine Bush, 1400 Washington Ave<br>Albany, NY 12222</address>
+    <div class="contact">
+      <span class="email" id="email">jtasnimjahan@albany.edu</span>
+      <button class="copy" id="copy-email" type="button">Copy email</button>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/jabin-tasnim-jahan-mph-a1465b325" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://orcid.org/0009-0009-9831-2830" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://sites.google.com/view/jabintasnimjahanseportfolio" target="_blank" rel="noopener">ePortfolio</a>
+    </div>
+  </section>
+
+  <footer>Department of Epidemiology and Biostatistics · College of Integrated Health Sciences · University at Albany, SUNY</footer>
+</div>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var btn = this, text = document.getElementById('email').textContent;
+  function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy email'; }, 1800); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(document.getElementById('email')); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected, press Ctrl+C'; }
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+</body>
+</html>
